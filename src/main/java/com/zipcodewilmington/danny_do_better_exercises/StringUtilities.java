@@ -1,5 +1,7 @@
 package com.zipcodewilmington.danny_do_better_exercises;
 
+import java.util.List;
+
 /**
  * Created by dan on 6/14/17.
  */
@@ -48,7 +50,7 @@ public class StringUtilities {
         String result = "";
         int endIndex = input.length() - 1;
         for(int i = endIndex; i > endIndex - 3; i--){
-            result+=input.charAt(i);
+            result = input.charAt(i) + result;
         }
         return result;
     }
@@ -59,7 +61,7 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+        return inputValue.equals(comparableValue);
     }
 
     /**
@@ -67,7 +69,8 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+
+        return inputValue.charAt(inputValue.length()/2);
     }
 
     /**
@@ -75,7 +78,8 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+        List<String> words = List.of(spaceDelimitedString.split(" "));
+        return words.get(0);
     }
 
     /**
@@ -83,7 +87,8 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        List<String> words = List.of(spaceDelimitedString.split(" "));
+        return words.get(1);
     }
 
     /**
@@ -91,6 +96,10 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        String result = "";
+        for(int i = stringToReverse.length() - 1; i >= 0 ; i--){
+            result += stringToReverse.charAt(i);
+        }
+        return result;
     }
 }
