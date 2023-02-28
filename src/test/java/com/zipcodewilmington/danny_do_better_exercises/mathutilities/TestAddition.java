@@ -82,6 +82,4 @@ public class TestAddition {
         // : Then
         assertEquals(expected, actual, 0);
     }
-
-
 }
