@@ -95,10 +95,8 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        String result = "";
-        for(int i = stringToReverse.length() - 1; i >= 0 ; i--){
-            result += stringToReverse.charAt(i);
-        }
+        StringBuilder stringBuilder = new StringBuilder(stringToReverse);
+        String result = stringBuilder.reverse().toString();
         return result;
     }
 }
